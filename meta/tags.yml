@@ -11,3 +11,13 @@ tags:
     name: mdx
   - slug: markdown
     name: markdown
+  - slug: photography
+    name: photography
+  - slug: blackandwhite
+    name: blackandwhite
+  - slug: fuji
+    name: fuji
+  - slug: xpro3
+    name: xpro3
+  - slug: acros
+    name: acros

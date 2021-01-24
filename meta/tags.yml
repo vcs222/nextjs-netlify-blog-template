@@ -29,4 +29,5 @@ tags:
     name: socialdistancing
   - slug: reflection
     name: reflection
-
+  - slug: silhouette
+    name: silhouette

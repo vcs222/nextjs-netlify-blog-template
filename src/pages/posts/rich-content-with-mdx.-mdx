@@ -29,11 +29,3 @@ import YouTube from "react-youtube";
 <p>
   <YouTube videoId={"2g811Eo7K8U"} containerClassName={"youtube-container"} />
 </p>
-
-## Twitter with react-twitter-embed
-
-import { TwitterTweetEmbed } from "react-twitter-embed";
-
-<p>
-  <TwitterTweetEmbed tweetId={"933354946111705097"} />
-</p>

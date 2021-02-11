@@ -6,7 +6,7 @@ type Config = {
   readonly site_description: string;
   readonly site_keywords: { keyword: string }[];
   readonly posts_per_page: number;
-  readonly twitter_account: string;
+  readonly email_account: string;
   readonly github_account: string;
 };
 

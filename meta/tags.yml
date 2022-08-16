@@ -9,6 +9,14 @@ tags:
     name: xpro3
   - slug: acros
     name: acros
+  - slug: astia
+    name: astia
+  - slug: provia
+    name: provia
+  - slug: velvia
+  - name: velvia
+  - slug: classicchrome
+    name: classicchrome
   - slug: classicneg
     name: classicneg
   - slug: wabisabi
@@ -19,7 +27,5 @@ tags:
     name: reflection
   - slug: silhouette
     name: silhouette
-  - slug: classicchrome
-    name: classicchrome
   - slug: iphone
     name: iphone

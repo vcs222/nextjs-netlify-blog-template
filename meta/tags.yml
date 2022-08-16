@@ -14,7 +14,7 @@ tags:
   - slug: provia
     name: provia
   - slug: velvia
-  - name: velvia
+    name: velvia
   - slug: classicchrome
     name: classicchrome
   - slug: classicneg

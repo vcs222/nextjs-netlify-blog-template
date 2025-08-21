@@ -35,11 +35,11 @@ import YouTube from "react-youtube";
     containerClassName={"youtube-container"}
     opts={{
       playerVars: {
-        autoplay: false,
+        autoplay: 0,
+        modestbranding: 1,
+        rel: 0,
+        start: 1296,
       },
-    }}
-    onReady={(event) => {
-      event.target.seekTo(1296);
     }}
   />
 </p>

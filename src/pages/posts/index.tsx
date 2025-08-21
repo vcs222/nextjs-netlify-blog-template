@@ -16,6 +16,7 @@ type Props = {
     pages: number;
   };
 };
+
 export default function Index({ posts, tags, pagination }: Props) {
   const url = "/posts";
   const title = "All posts";
@@ -35,6 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
     current: 1,
     pages: Math.ceil(countPosts() / config.posts_per_page),
   };
+  
   return {
     props: {
       posts,

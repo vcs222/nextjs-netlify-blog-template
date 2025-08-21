@@ -10,6 +10,8 @@ export type PostContent = {
   readonly title: string;
   readonly slug: string;
   readonly tags?: string[];
+  readonly content: string;
+  readonly firstImage?: string;
 };
 
 let postCache: PostContent[];
@@ -48,7 +50,21 @@ function fetchPostContent(): PostContent[] {
         );
       }
 
-      return matterData;
+      // Extract content and first image
+      const content = matterResult.content;
+      let firstImage: string | undefined;
+      
+      // Look for the first image in the content
+      const imageMatch = content.match(/!\[.*?\]\(([^)]+)\)/);
+      if (imageMatch) {
+        firstImage = imageMatch[1];
+      }
+
+      return {
+        ...matterData,
+        content,
+        firstImage,
+      };
     });
   // Sort posts by date
   postCache = allPostsData.sort((a, b) => {
@@ -75,4 +91,10 @@ export function listPostContent(
   return fetchPostContent()
     .filter((it) => !tag || (it.tags && it.tags.includes(tag)))
     .slice((page - 1) * limit, page * limit);
+}
+
+export function getAllPosts(tag?: string): PostContent[] {
+  return fetchPostContent().filter(
+    (it) => !tag || (it.tags && it.tags.includes(tag))
+  );
 }

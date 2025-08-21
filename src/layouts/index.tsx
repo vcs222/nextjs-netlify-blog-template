@@ -9,7 +9,7 @@ import BasicMeta from "../components/meta/BasicMeta";
 import JsonLdMeta from "../components/meta/JsonLdMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import { SocialList } from "../components/SocialList";
-import TagButton from "../components/TagButton";
+import TagLink from "../components/TagLink";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
 
@@ -70,7 +70,7 @@ export default function Index({
             <ul className={"tag-list"}>
               {tags.map((it, i) => (
                 <li key={i}>
-                  <TagButton tag={getTag(it)} />
+                  <TagLink tag={getTag(it)} />
                 </li>
               ))}
             </ul>
@@ -112,6 +112,7 @@ export default function Index({
             .tag-list li {
               display: inline-block;
               margin-left: 0.5rem;
+              margin-bottom: 0.5rem;
             }
             .social-list {
               margin-top: 3rem;

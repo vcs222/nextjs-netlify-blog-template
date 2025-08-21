@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import styles from "../../public/styles/content.module.css";
+import "../styles/content.module.css";
 import Author from "../components/Author";
 import Copyright from "../components/Copyright";
 import Date from "../components/Date";
@@ -66,7 +66,7 @@ export default function Index({
                 </div>
               </div>
             </header>
-            <div className={styles.content}>{content}</div>
+            <div className="content">{content}</div>
             <ul className={"tag-list"}>
               {tags.map((it, i) => (
                 <li key={i}>
